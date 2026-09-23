@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Times New Roman', Times, serif, system-ui;
+    color: #1f2937;
+    background-color: #f3f4f6;
+  }
+}
+
+/* Print Styles for Standard A4 Paper according to Decree 30/2020/NĐ-CP */
+@page {
+  size: A4 portrait;
+  margin: 20mm 15mm 20mm 30mm;
+}
+
+@media print {
+  html, body {
+    background: white !important;
+    color: black !important;
+    font-size: 13pt !important;
+  }
+
+  .no-print {
+    display: none !important;
+  }
+
+  .print-container {
+    padding: 0 !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  .page-break {
+    page-break-before: always;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

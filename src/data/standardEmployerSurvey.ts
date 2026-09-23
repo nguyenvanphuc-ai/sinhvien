@@ -1,0 +1,373 @@
+import { SurveyDocument } from '../types/survey';
+
+export const EXACT_EMPLOYER_SURVEY: SurveyDocument = {
+  institution: 'BỘ CÔNG THƯƠNG',
+  university: 'TRƯỜNG ĐẠI HỌC CÔNG NGHIỆP VÀ THƯƠNG MẠI HÀ NỘI (HITU)',
+  department: 'NHÓM ĐHQL2-K10 - BAN HỢP TÁC DOANH NGHIỆP',
+  surveyCode: 'DN-HITU-K10/2026',
+  title: 'PHIẾU KHẢO SÁT DOANH NGHIỆP\nVề nhu cầu nhân lực và mức độ đáp ứng của người học/sinh viên',
+  subtitle: 'Dành cho Cơ quan, Doanh nghiệp và Người sử dụng lao động',
+  introduction:
+    'Kính gửi Quý Doanh nghiệp!\n\nNhằm tăng cường sự gắn kết giữa cơ sở giáo dục và doanh nghiệp, đồng thời nâng cao chất lượng đào tạo, Nhà trường khảo sát nhằm thu thập dữ liệu đáp ứng yêu cầu thực tế của thị trường lao động về nhu cầu tuyển dụng, yêu cầu đối với nguồn nhân lực và mức độ đáp ứng của người học/sinh viên.\n\nNhững thông tin Quý Doanh nghiệp cung cấp được sử dụng cho mục đích nghiên cứu, cải tiến chương trình và nâng cao chất lượng đào tạo.\n\nNhà trường trân trọng cảm ơn sự hợp tác của Quý Doanh nghiệp.',
+  targetAudience: 'Doanh nghiệp và Nhà tuyển dụng',
+  likertScale: {
+    '1': 'Không quan trọng / Chưa đáp ứng (Mức độ rất thấp, chưa đạt yêu cầu)',
+    '2': 'Ít quan trọng / Đáp ứng thấp (Còn nhiều thiếu sót, chưa đạt kỳ vọng)',
+    '3': 'Bình thường / Đáp ứng một phần (Mức độ trung bình, tạm chấp nhận)',
+    '4': 'Quan trọng / Đáp ứng tốt (Đạt tiêu chuẩn, phù hợp nhu cầu doanh nghiệp)',
+    '5': 'Rất quan trọng / Đáp ứng rất tốt (Xuất sắc, vượt trên kỳ vọng tuyển dụng)',
+  },
+  sections: [
+    {
+      id: 'sec_a',
+      title: 'PHẦN A: THÔNG TIN CHUNG VỀ DOANH NGHIỆP',
+      description: 'Quý đơn vị vui lòng cung cấp một số thông tin cơ bản:',
+      questions: [
+        {
+          id: 'q_a1',
+          code: 'A1',
+          content: 'A1. Tên doanh nghiệp: ....................................................................................................',
+          type: 'text',
+          placeholder: 'Nhập tên doanh nghiệp của Quý vị...',
+        },
+        {
+          id: 'q_a2',
+          code: 'A2',
+          content: 'A2. Lĩnh vực hoạt động chính của doanh nghiệp:',
+          type: 'multiple',
+          options: [
+            'Sản xuất',
+            'Du lịch – khách sạn – nhà hàng',
+            'Thương mại',
+            'May mặc – thời trang',
+            'Dịch vụ',
+            'Xây dựng',
+            'Công nghệ thông tin',
+            'Tài chính – ngân hàng',
+            'Giáo dục – đào tạo',
+            'Khác: .................................................................',
+          ],
+        },
+        {
+          id: 'q_a3',
+          code: 'A3',
+          content: 'A3. Quy mô doanh nghiệp:',
+          type: 'single',
+          options: [
+            'Dưới 10 lao động',
+            'Từ 10–49 lao động',
+            'Từ 50–199 lao động',
+            'Từ 200–499 lao động',
+            'Từ 500 lao động trở lên',
+          ],
+        },
+        {
+          id: 'q_a4',
+          code: 'A4',
+          content: 'A4. Người trả lời phiếu thuộc vị trí:',
+          type: 'single',
+          options: [
+            'Ban Giám đốc / Lãnh đạo doanh nghiệp',
+            'Cán bộ quản lý nhân sự',
+            'Trưởng / phó bộ phận chuyên môn',
+            'Cán bộ phụ trách tuyển dụng',
+            'Khác: .................................................................',
+          ],
+        },
+        {
+          id: 'q_a5',
+          code: 'A5',
+          content: 'A5. Doanh nghiệp đã từng tiếp nhận người học/sinh viên của Nhà trường chưa?',
+          type: 'single',
+          options: ['Có', 'Chưa'],
+        },
+      ],
+    },
+    {
+      id: 'sec_b',
+      title: 'PHẦN B: NHU CẦU TUYỂN DỤNG NHÂN LỰC',
+      description: 'Dự báo nhu cầu tuyển dụng của đơn vị trong thời gian tới:',
+      questions: [
+        {
+          id: 'q_b1',
+          code: 'B1',
+          content:
+            'B1. Trong 1–3 năm tới, doanh nghiệp có nhu cầu tuyển dụng lao động trình độ phù hợp với ngành/nghề đào tạo của Nhà trường không?',
+          type: 'single',
+          options: [
+            'Không có nhu cầu',
+            'Nhu cầu ít',
+            'Nhu cầu trung bình',
+            'Nhu cầu cao',
+            'Nhu cầu rất cao',
+          ],
+        },
+        {
+          id: 'q_b2',
+          code: 'B2',
+          content: 'B2. Doanh nghiệp thường tuyển dụng nhân lực ở trình độ nào?',
+          type: 'multiple',
+          options: [
+            'Trung cấp',
+            'Cao đẳng',
+            'Đại học',
+            'Sau đại học',
+            'Khác: .................................................................',
+          ],
+        },
+        {
+          id: 'q_b3',
+          code: 'B3',
+          content: 'B3. Những vị trí công việc doanh nghiệp có nhu cầu tuyển dụng:',
+          type: 'text',
+          placeholder: 'Ví dụ: Kỹ sư phần mềm, Quản lý bán hàng, Kế toán viên...',
+        },
+        {
+          id: 'q_b4',
+          code: 'B4',
+          content: 'B4. Số lượng lao động dự kiến tuyển dụng trong 1–3 năm tới:',
+          type: 'single',
+          options: [
+            'Dưới 5 người',
+            '11–20 người',
+            '21–50 người',
+            'Trên 50 người',
+            'Chưa xác định',
+          ],
+        },
+      ],
+    },
+    {
+      id: 'sec_c',
+      title: 'PHẦN C: YÊU CẦU ĐỐI VỚI NGƯỜI LAO ĐỘNG',
+      description:
+        'Xin vui lòng đánh giá mức độ quan trọng của các tiêu chí theo thang điểm từ 1 đến 5:',
+      questions: [
+        {
+          id: 'q_c1',
+          code: 'C1',
+          content: 'C1. Đánh giá mức độ quan trọng của các tiêu chí đối với người lao động khi tuyển dụng:',
+          type: 'matrix',
+          matrixItems: [
+            { code: 'C1.1', statement: 'Kiến thức chuyên môn' },
+            { code: 'C1.2', statement: 'Kỹ năng thực hành nghề' },
+            { code: 'C1.3', statement: 'Khả năng vận dụng kiến thức vào thực tế' },
+            { code: 'C1.4', statement: 'Kỹ năng giao tiếp' },
+            { code: 'C1.5', statement: 'Kỹ năng làm việc nhóm' },
+            { code: 'C1.6', statement: 'Kỹ năng giải quyết vấn đề' },
+            { code: 'C1.7', statement: 'Kỹ năng sử dụng công nghệ' },
+            { code: 'C1.8', statement: 'Khả năng tự học, tự cập nhật kiến thức' },
+            { code: 'C1.9', statement: 'Tính chủ động trong công việc' },
+            { code: 'C1.10', statement: 'Tinh thần trách nhiệm' },
+            { code: 'C1.11', statement: 'Ý thức kỷ luật' },
+            { code: 'C1.12', statement: 'Tác phong nghề nghiệp' },
+            { code: 'C1.13', statement: 'Khả năng thích nghi với môi trường làm việc' },
+            { code: 'C1.14', statement: 'Đạo đức nghề nghiệp' },
+          ],
+        },
+      ],
+    },
+    {
+      id: 'sec_d',
+      title: 'PHẦN D: ĐÁNH GIÁ MỨC ĐỘ ĐÁP ỨNG CỦA NGƯỜI HỌC / SINH VIÊN',
+      description:
+        'Nếu doanh nghiệp đã từng tiếp nhận người học/sinh viên của Nhà trường, xin Quý Doanh nghiệp đánh giá mức độ đáp ứng:',
+      questions: [
+        {
+          id: 'q_d1',
+          code: 'D1',
+          content: 'D1. Mức độ đáp ứng năng lực của người học/sinh viên theo thang điểm 1 đến 5:',
+          type: 'matrix',
+          matrixItems: [
+            { code: 'D1.1', statement: 'Kiến thức chuyên môn' },
+            { code: 'D1.2', statement: 'Kỹ năng thực hành' },
+            { code: 'D1.3', statement: 'Khả năng vận dụng kiến thức' },
+            { code: 'D1.4', statement: 'Kỹ năng giao tiếp' },
+            { code: 'D1.5', statement: 'Kỹ năng làm việc nhóm' },
+            { code: 'D1.6', statement: 'Kỹ năng giải quyết vấn đề' },
+            { code: 'D1.7', statement: 'Khả năng sử dụng công nghệ' },
+            { code: 'D1.8', statement: 'Tính chủ động, sáng tạo' },
+            { code: 'D1.9', statement: 'Ý thức trách nhiệm' },
+            { code: 'D1.10', statement: 'Tác phong và kỷ luật lao động' },
+            { code: 'D1.11', statement: 'Khả năng thích nghi với công việc' },
+          ],
+        },
+        {
+          id: 'q_d2',
+          code: 'D2',
+          content:
+            'D2. Theo Quý Doanh nghiệp, những điểm mạnh nổi bật của người học/sinh viên HITU là gì?',
+          type: 'text',
+          placeholder: 'Ghi nhận xét về điểm mạnh của sinh viên...',
+        },
+        {
+          id: 'q_d3',
+          code: 'D3',
+          content:
+            'D3. Những kiến thức hoặc kỹ năng người học/sinh viên HITU còn hạn chế cần bổ sung là gì?',
+          type: 'text',
+          placeholder: 'Ghi nhận xét về mặt còn hạn chế cần khắc phục...',
+        },
+      ],
+    },
+    {
+      id: 'sec_e',
+      title: 'PHẦN E: ĐÁNH GIÁ SỰ PHÙ HỢP CỦA CHƯƠNG TRÌNH ĐÀO TẠO',
+      description: 'Ý kiến về chương trình đào tạo của Nhà trường:',
+      questions: [
+        {
+          id: 'q_e1',
+          code: 'E1',
+          content:
+            'E1. Theo Quý Doanh nghiệp, mức độ phù hợp giữa chương trình đào tạo và yêu cầu thực tế của doanh nghiệp là:',
+          type: 'single',
+          options: [
+            'Rất chưa phù hợp',
+            'Chưa phù hợp',
+            'Phù hợp một phần',
+            'Phù hợp',
+            'Rất phù hợp',
+          ],
+        },
+        {
+          id: 'q_e2',
+          code: 'E2',
+          content: 'E2. Những nội dung nào cần được tăng cường trong chương trình đào tạo?',
+          type: 'multiple',
+          options: [
+            'Kiến thức chuyên môn',
+            'Kỹ năng giải quyết vấn đề',
+            'Thực hành nghề nghiệp',
+            'Ngoại ngữ',
+            'Kỹ năng sử dụng thiết bị/công nghệ',
+            'Tác phong, kỷ luật lao động',
+            'Kỹ năng số',
+            'Kỹ năng thích ứng với môi trường làm việc',
+            'Kỹ năng giao tiếp',
+            'Kỹ năng làm việc nhóm',
+            'Khác: .................................................................',
+          ],
+        },
+        {
+          id: 'q_e3',
+          code: 'E3',
+          content:
+            'E3. Doanh nghiệp có đề xuất nội dung đào tạo cụ thể nào cần bổ sung hoặc điều chỉnh không?',
+          type: 'text',
+          placeholder: 'Nội dung bổ sung / điều chỉnh kiến thức, kỹ năng...',
+        },
+      ],
+    },
+    {
+      id: 'sec_f',
+      title: 'PHẦN F: NHU CẦU HỢP TÁC GIỮA NHÀ TRƯỜNG VÀ DOANH NGHIỆP',
+      description: 'Các hình thức hợp tác mong muốn triển khai:',
+      questions: [
+        {
+          id: 'q_f1',
+          code: 'F1',
+          content:
+            'F1. Doanh nghiệp có sẵn sàng hợp tác với Nhà trường trong các hoạt động sau không?',
+          type: 'multiple',
+          options: [
+            'Tiếp nhận người học/sinh viên thực tập',
+            'Tiếp nhận người học/sinh viên tham quan, trải nghiệm thực tế',
+            'Tham gia góp ý xây dựng/chỉnh sửa chương trình đào tạo',
+            'Tham gia đào tạo, hướng dẫn thực hành',
+            'Cử chuyên gia tham gia các hoạt động chuyên môn tại Nhà trường',
+            'Phối hợp tổ chức hội thảo/tọa đàm nghề nghiệp',
+            'Tham gia tuyển dụng người học/sinh viên sau tốt nghiệp',
+            'Cung cấp thông tin về nhu cầu tuyển dụng',
+            'Hợp tác theo hình thức khác: .................................................................',
+          ],
+        },
+        {
+          id: 'q_f2',
+          code: 'F2',
+          content: 'F2. Mức độ sẵn sàng hợp tác của doanh nghiệp với Nhà trường:',
+          type: 'single',
+          options: [
+            'Chưa có nhu cầu',
+            'Ít sẵn sàng',
+            'Sẵn sàng ở mức độ nhất định',
+            'Sẵn sàng',
+            'Rất sẵn sàng',
+          ],
+        },
+        {
+          id: 'q_f3',
+          code: 'F3',
+          content:
+            'F3. Doanh nghiệp mong muốn Nhà trường tăng cường hình thức hợp tác nào?',
+          type: 'text',
+          placeholder: 'Hình thức hợp tác doanh nghiệp mong muốn tăng cường...',
+        },
+      ],
+    },
+    {
+      id: 'sec_g',
+      title: 'PHẦN G: Ý KIẾN ĐỀ XUẤT',
+      description: 'Ý kiến đóng góp cho Nhà trường và sinh viên:',
+      questions: [
+        {
+          id: 'q_g1',
+          code: 'G1',
+          content:
+            'G1. Theo Quý Doanh nghiệp, Nhà trường cần làm gì để người học/sinh viên đáp ứng tốt hơn yêu cầu của doanh nghiệp?',
+          type: 'text',
+          placeholder: 'Ý kiến đề xuất của Quý Doanh nghiệp...',
+        },
+        {
+          id: 'q_g2',
+          code: 'G2',
+          content:
+            'G2. Quý Doanh nghiệp có đề xuất, kiến nghị hoặc góp ý nào khác đối với Nhà trường?',
+          type: 'text',
+          placeholder: 'Các đề xuất, kiến nghị khác...',
+        },
+      ],
+    },
+    {
+      id: 'sec_h',
+      title: 'PHẦN H: THÔNG TIN LIÊN HỆ ĐỐI TÁC (TÙY CHỌN)',
+      description: 'Thông tin dùng để đối chiếu và gửi thư cảm ơn:',
+      questions: [
+        {
+          id: 'q_h1',
+          code: 'H1',
+          content: 'H1. Họ và tên người trả lời: ............................................................................................',
+          type: 'text',
+        },
+        {
+          id: 'q_h2',
+          code: 'H2',
+          content: 'H2. Chức vụ: .....................................................................................................................',
+          type: 'text',
+        },
+        {
+          id: 'q_h3',
+          code: 'H3',
+          content: 'H3. Số điện thoại: .............................................................................................................',
+          type: 'text',
+        },
+        {
+          id: 'q_h4',
+          code: 'H4',
+          content: 'H4. Email: ..........................................................................................................................',
+          type: 'text',
+        },
+        {
+          id: 'q_h5',
+          code: 'H5',
+          content: 'H5. Ngày khảo sát: ........./........./.............',
+          type: 'text',
+        },
+      ],
+    },
+  ],
+  closing:
+    'TRÂN TRỌNG CẢM ƠN SỰ HỢP TÁC CỦA QUÝ DOANH NGHIỆP!\nNhững ý kiến của Quý Doanh nghiệp là nguồn thông tin quan trọng giúp Nhà trường cải tiến chương trình đào tạo, nâng cao chất lượng người học và tăng cường sự gắn kết giữa đào tạo với nhu cầu thực tế của doanh nghiệp.',
+  locationDate: 'Hà Nội, ngày ... tháng ... năm 2026',
+  signatoryTitle: 'HIỆU TRƯỞNG / ĐẠI DIỆN NHÀ TRƯỜNG',
+  signatoryNote: '(Ký và đóng dấu)',
+};

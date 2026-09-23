@@ -1,0 +1,6 @@
+{
+  "name": "Hệ Thống Tạo Phiếu Khảo Sát - ĐHQL2-K10 HITU",
+  "description": "Ứng dụng tạo phiếu khảo sát chuẩn hành chính tự động bằng AI của Nhóm ĐHQL2-K10 Trường Đại học Công nghiệp và Thương mại Hà Nội (HITU), hỗ trợ xuất file Word chuẩn Nghị định 30/2020/NĐ-CP.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
